@@ -1,0 +1,24 @@
+{
+  "name": "the-cheez-cave",
+  "version": "1.0.0",
+  "description": "The Cheez Cave — a small full-stack app for cataloguing the cheeses in your cave.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "eslint": "^9.18.0",
+    "globals": "^15.14.0",
+    "supertest": "^7.0.0"
+  }
+}

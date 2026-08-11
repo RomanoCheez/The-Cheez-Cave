@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Cheez Cave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%80%3C/text%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__inner">
+        <h1><span class="hero__emoji">🧀</span> The Cheez Cave</h1>
+        <p class="hero__tagline">Catalogue every wheel, wedge, and crumble aging in your cave.</p>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Add a cheese</h2>
+        <form id="cheese-form" class="form" autocomplete="off">
+          <div class="field">
+            <label for="name">Name <span class="req">*</span></label>
+            <input id="name" name="name" type="text" placeholder="Aged Gouda" required />
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="origin">Origin</label>
+              <input id="origin" name="origin" type="text" placeholder="Netherlands" />
+            </div>
+            <div class="field">
+              <label for="type">Type</label>
+              <select id="type" name="type">
+                <option value="hard">Hard</option>
+                <option value="semi-soft">Semi-soft</option>
+                <option value="soft">Soft</option>
+                <option value="fresh">Fresh</option>
+                <option value="blue">Blue</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="notes">Tasting notes</label>
+            <textarea id="notes" name="notes" rows="2" placeholder="Nutty, caramel-sweet, crystalline crunch…"></textarea>
+          </div>
+          <button type="submit" class="btn">Add to the cave</button>
+          <p id="form-error" class="error" role="alert" hidden></p>
+        </form>
+      </section>
+
+      <section class="panel panel--wide">
+        <div class="panel__header">
+          <h2>In the cave</h2>
+          <span id="count" class="pill">0</span>
+        </div>
+        <ul id="cheese-list" class="cheese-list" aria-live="polite"></ul>
+        <p id="empty" class="empty" hidden>Your cave is empty. Add your first cheese!</p>
+      </section>
+    </main>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
