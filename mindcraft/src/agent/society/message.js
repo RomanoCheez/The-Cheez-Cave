@@ -1,0 +1,1 @@
+export const SOCIETY_INIT_MESSAGE = 'You live in a settlement with the other bots. Call !goal with this plan and never call !endGoal: obey the sociological route on every reply, do your own role, put surplus in the town chest, and let customs become laws by proposal and vote. Every reply must contain exactly one command.';
